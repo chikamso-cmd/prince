@@ -63,7 +63,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  /* font-family: var(--default-font); */
 }
 
 a {
@@ -84,7 +84,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  /* font-family: var(--heading-font); */
 }
 
 /* PHP Email Form Messages
@@ -1453,11 +1453,4 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
