@@ -2,10 +2,10 @@
     --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Playfair Display",  sans-serif;
     --nav-font: "Poppins",  sans-serif;
-    --bg-color: #b8a07e;
+    --bg-color: rgb(184, 160, 126);
     --acent-color: #303030;
     --light-color: #2b2b2b;
-    --link-color: rgb(244, 183, 6);
+    --link-color: rgb(184, 160, 126);
   }
 
 
@@ -277,7 +277,21 @@ color: inherit;
 } */
 
 .more i{
-    margin-left: 8px;
+    margin-left: 9px;
+    position: absolute;
+    margin-top: 4px;
+    animation: forward linear infinite 1s;
+}
+.mores i{
+    position: absolute;
+    margin-top: 3.2px;
+    margin-left: 7px;
+    animation: forward linear infinite 1s;
+}
+@keyframes forward {
+    100%{
+        margin-left: 2px;
+    }
 }
 .card{
     border: 0!important;
@@ -366,6 +380,10 @@ form>button{
     transition: all 500ms;
     border-radius: 2px;
 }
+form>button:hover{
+    color: #fff;
+    background:  rgba(203, 180, 147, 0.928);
+}
 .footer-wrapper{
     /* background: red; */
     /* justify-content: space-evenly; */
@@ -387,6 +405,27 @@ form>button{
     text-transform: capitalize;
     color: inherit;
 
+}
+.footers-links{
+    background: #000;
+    width: 40%;
+    overflow: hidden;
+    position: relative;
+}
+.footers-links h3{
+    text-transform: capitalize;
+    color: #fff;
+    margin-left: 15px;
+}
+.footers-links ul{
+    color: #fff;
+    text-transform: capitalize;
+    left: 0;
+    position: absolute;
+}
+.footers-links ul li{
+    list-style: none;
+    margin: 3px;
 }
 @media screen and (max-width:2560px){
     .service-wrapper{
