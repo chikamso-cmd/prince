@@ -44,16 +44,16 @@ color: #fff;
     font-size: 2rem;
 }
 .get-started{
-    width: 15rem;
+    width: 20rem;
     height: 3rem;
-    background: var(--link-color);
+    background: transparent;
     border-radius: 2px;
     border: 0;
     transition: all 500ms;
 }
 .get-started a{
     text-transform: capitalize;
-    color: #111;
+    color: #fff;
 }
 .wrapper1{
     display: flex;
@@ -230,6 +230,7 @@ color: var(--acent-color);
     justify-content: space-between;
     padding: 10px;
     color: var(--acent-color);
+    width: 100%;
     /* background-color: red; */
 }
 .conts h2{
@@ -289,14 +290,19 @@ color: inherit;
     margin-left: 7px;
     animation: forward linear infinite 1s;
 }
-@keyframes forward {
+/* @keyframes forward {
     100%{
         margin-left: 2px;
     }
-}
+} */
 .card{
     border: 0!important;
     box-shadow: 0 0 8px #cccccc7c;
+    flex-shrink: 0;
+    width: 250px ;
+    /* left: 50% !important; */
+    /* transform: translateX(-50%) !important; */
+    position: relative !important;
 }
 .card-body{
     gap: 10px;
@@ -307,8 +313,11 @@ color: inherit;
     /* background: #07c995; */
     gap: 5px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow-x: auto;
+    /* background: red; */
 }
 .service-content{
     display: flex;
@@ -380,6 +389,8 @@ form>button{
     font-size: 1.4rem;
     transition: all 500ms;
     border-radius: 2px;
+    color: #fff;
+    font-size: 13px;
 }
 form>button:hover{
     color: #fff;
@@ -391,6 +402,7 @@ form>button:hover{
     align-items: center;
     display: flex;
     gap: 10px;
+    /* padding: 10px 20px; */
 }
 .footer-about{
     width: 50%;
@@ -499,16 +511,94 @@ form>button:hover{
     bottom: 1.8rem;
 }
 .control-container{
-    position: absolute;
-    right: 6rem;
-    top: 5%;
+    color: #111;
+}
+.featured-wrapper{
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+    /* border: 1px solid #d2f653; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+
+}
+.child{
+    flex-shrink: 0;
+    /* height: 185px; */
+    width: 250px;
+    /* background: #71eed3; */
+    margin: 5px;
+    text-align: left;
+    /* line-height: 13px; */
+    line-clamp: 20px;
+    margin-bottom: 5px;
+    /* border: 1px solid #fff; */
+    /* padding: 10px; */
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+}
+.child:nth-child(even){
+    /* background: #91decf; */
+}
+.child-image{
+    width: 250px;
+    height: 100px;
+    overflow: hidden;
+    transition: all 500ms ease-in-out;
+    
+
+}
+.child:hover .child-image, .child-image img{
+   width: 104%;
+}
+.child-image img{
+    width: 100%;
+}
+.child-content{
+    margin-top: 4px;
+}
+.child-content p{
+   font-size: 10px;
 }
 
-.control-container i{
-    padding: 5px;
+.child-content a{
+    color: #fff;
+}
+.call-to-action{
+    background: url(/assets/img/construction/skyscrapers-1920x1080.jpg);
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-image: fill 0 linear-gradient(#0003, #000);
+}
+.content{
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    color: #fff;
+    /* background: red; */
+    margin-top: -4%;
+}
+.content p{
+    margin-bottom: 10px;
+}
+.content a{
+    color: #fff;
+    text-transform: capitalize;
     border: 1px solid #fff;
-    margin: 5px;
-    cursor: pointer;
+    border-radius: 2px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.content a:hover{
+    background-color: #fff;
+    color: #111;
 }
 
 @media screen and (max-width:2560px){
@@ -593,9 +683,9 @@ form>button:hover{
             display: block;
             
         }
-        .wraps{
+        /* .wraps{
             flex-direction: column;
-        }
+        } */
         .service-content{
             display: flex;
             width: 30rem;
@@ -618,4 +708,66 @@ form>button:hover{
         .footer-wrapper{
             flex-direction: column;
         }
+        .content a{
+            top: 84%;
+        }
+}
+@media (max-width:325px){
+    .content a{
+        top: 94%;
+    }
+    .card{
+        border: 0!important;
+        box-shadow: 0 0 8px #cccccc7c;
+        flex-shrink: 0;
+        width: 280px ;
+        /* left: 50% !important; */
+        /* transform: translateX(-50%) !important; */
+        position: relative !important;
+    }
+    .child{
+        flex-shrink: 0;
+        /* height: 285px; */
+        width: 250px;
+        margin: 5px;
+        text-align: left;
+        line-clamp: 20px;
+        margin-bottom: 5px;
+        /* border: 1px solid #fff; */
+        overflow: hidden;
+        transition: all 500ms ease-in-out;
+    }
+    .child-content{
+        overflow: hidden;
+    }
+    .child-content p{
+        /* color: #da0d0d; */
+        font-size: 10px;
+    }
+    .child-content a{
+        font-size: 10px;
+        margin-top: 0;
+
+    }
+    .footer-about, .footers-links{
+        width: 100%;
+        font-size: 10px;
+    }
+    .footers-links{
+        width: 10rem;
+        /* background: red; */
+        font-size: 12px;
+        color: #fff;
+    }
+    .footers-links a{
+        color: #fff;
+    }
+
+    .head{
+        /* background: yellow; */
+        width: 70%;
+        padding: 10px;
+        color: #fff;
+        font-size: 12px;
+    }
 }
